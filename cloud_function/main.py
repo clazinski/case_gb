@@ -10,7 +10,7 @@ def load_raw_sales_to_bq(request):
         "Base_2018 (3).xlsx",
         "Base_2019 (5).xlsx"
     ]
-    table_id = f"{project_id}.raw.sales"
+    table_id = f"{project_id}.raw.vendas"
 
     storage_client = storage.Client()
     bq_client = bigquery.Client()
