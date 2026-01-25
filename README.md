@@ -60,5 +60,5 @@ Visão geral do processo de ingestão, tratamento e modelagem.
 
 
 ## Links
-- [Dashboards (Looker Studio)](https://lookerstudio.google.com/reporting/14cbaf46-3b91-4c95-9818-e71ce15b1d7a).
+- [Dashboards (Looker Studio)](https://lookerstudio.google.com/reporting/df79d396-8f30-4839-86e7-ce91a63e9687).
 - [Repositório](https://github.com/clazinski/case_gb).
