@@ -4,34 +4,36 @@
 
 ## Modelagem
 ```
-                   ┌─────────────────────────────┐
-                   │        staging.vendas       │
-                   │-----------------------------│
-                   │ data_venda                  │
-                   │ id_marca / marca            │
-                   │ id_linha / linha            │
-                   │ qtd_venda                   │
-                   └─────────────┬───────────────┘
-                                 │
-        ┌────────────────────────┼────────────────────────┐
-        │                        │                        │
-┌───────────────────┐  ┌───────────────────────┐ ┌───────────────────────┐
-│ vendas_por_mes_ano│  │ vendas_por_marca_linha│ │ vendas_por_marca_data │
-│-------------------│  │-----------------------│ │-----------------------│
-│ ano               │  │ marca                 │ │ marca                 │
-│ mes               │  │ linha                 │ │ data_venda            │
-│ total_vendas      │  │ total_vendas          │ │ ano / mes             │
-│                   │  │                       │ │ total_vendas          │
-└───────────────────┘  └───────────────────────┘ └───────────────────────┘
-                                                   │
-                                         ┌─────────┴────────────┐
-                                         │ vendas_por_linha_data│
-                                         │----------------------│
-                                         │ linha                │
-                                         │ data_venda           │
-                                         │ ano / mes            │
-                                         │ total_vendas         │
-                                         └──────────────────────┘
+                                                     ┌───────────────────────────────┐
+                                                     │        staging.vendas         │
+                                                     │-------------------------------│
+                                                     │ data_venda          (DATE)    │
+                                                     │ ano_venda           (INTEGER) │
+                                                     | mes_venda           (INTEGER) │
+                                                     | marca               (STRING)  │
+                                                     | id_marca            (INTEGER) │
+                                                     │ linha               (STRING)  │
+                                                     | id_linha            (INTEGER) │
+                                                     │ qtd_venda           (INTEGER) │
+                                                     │ data_processamento (TIMESTAMP)│
+                                                     └─────────────┬─────────────────┘
+                                                                   │
+        ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+        │                                              │                              │
+┌───────────────────────────────┐  ┌───────────────────────────────────┐ ┌─────────────────────────────────┐ ┌────────────────────────────────┐
+│ analytics.vendas_por_mes_ano  │  │ analytics.vendas_por_marca_linha  │ │ analytics.vendas_por_marca_data │ │ analytics.vendas_por_linha_data│
+│-------------------------------│  │-----------------------------------│ │---------------------------------│ │--------------------------------│
+│ data_venda         (DATE)     │  | id_marca               (INTEGER)  │ | id_marca           (INTEGER)    │ │ id_linha             (INTEGER) │
+│ ano                (INTEGER)  │  | marca                  (STRING)   │ │ marca              (STRING)     │ │ linha                (STRING)  │
+│ mes                (INTEGER)  │  | id_linha               (INTEGER)  │ │ data_venda         (DATE)       │ │ data_venda           (DATE)    │
+│ total_vendas       (INTEGER)  │  │ linha                  (STRING)   │ | ano                (INTEGER)    | │ ano                  (INTEGER) │
+│ total_registros    (INTEGER)  │  │ total_vendas           (INTEGER)  │ | mes                (INTEGER)    | │ mes                  (INTEGER) │
+│ data_processamento (TIMESTAMP)│  │ total_registros        (INTEGER)  │ │ total_vendas       (INTEGER)    │ │ total_vendas         (INTEGER) │
+└───────────────────────────────┘  │ data_processamento     (TIMESTAMP)│ │ total_registros    (INTEGER)    │ │ total_registros      (INTEGER) │
+                                   └───────────────────────────────────┘ │ data_processamento (TIMESTAMP)  │ │ data_processamento  (TIMESTAMP)│
+                                                                         └─────────────────────────────────┘ └────────────────────────────────┘
+                                               
+
 ```
 
 
