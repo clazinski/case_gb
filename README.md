@@ -1,4 +1,14 @@
 # Case GB
+
+## Ferramentas utilizadas na arquitetura proposta
+- Cloud Storage: armazenamento temporário dos arquivos brutos
+- BigQuery: banco de dados analítico
+- Python: processo de carga para camada raw
+- SQL: modelagem e criação das tabelas analíticas
+- Cloud Function/Scheduler e BigQuery Scheduled Queries: agendamento das cargas
+- GitHub: versionamento de código
+- Looker Studio: visualização de dados
+
 ## Arquitetura proposta
 ![Arquitetura proposta para o case.](https://i.postimg.cc/1m9vJRkV/arq.png)
 
