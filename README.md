@@ -1,4 +1,5 @@
-# Case GB
+# Case de Analytics Engineer — GB
+Projeto para importar, transformar e modelar dados de vendas (2017-2019) utilizando GCP, Python e SQL.
 
 ## Objetivos da Implementação
 - Carga e tratamento de dados
@@ -6,17 +7,22 @@
 - Automação e versionamento
 - Geração de insights para o time de negócio
 
-## Ferramentas Utilizadas na Arquitetura Proposta
-- Cloud Storage: armazenamento temporário dos arquivos brutos
-- BigQuery: banco de dados analítico
-- Python: processo de carga para camada raw
-- SQL: modelagem e criação das tabelas analíticas
-- Cloud Function/Scheduler e BigQuery Scheduled Queries: agendamento das cargas
-- GitHub: versionamento de código
-- Looker Studio: visualização de dados
+## Estrutura
 
-## Arquitetura proposta
+- /cloud_functions → código da função de ingestão para camada RAW
+- sql_scripts/datasets → queries para criar tabelas
+
+## Arquitetura do Fluxo de Dados
 ![Arquitetura proposta para o case.](https://i.postimg.cc/1m9vJRkV/arq.png)
+Visão geral do processo de ingestão, tratamento e modelagem.
+
+## Tech stack
+- Google Cloud Storage
+- Cloud Functions (Python)
+- BigQuery
+- BigQuery Scheduled Queries
+- Cloud Scheduler
+- Looker Studio
 
 ## Modelagem
 ```
