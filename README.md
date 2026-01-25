@@ -1,6 +1,12 @@
 # Case GB
 
-## Ferramentas utilizadas na arquitetura proposta
+## Objetivos da Implementação
+- Carga e tratamento de dados
+- Modelagem analítica
+- Automação e versionamento
+- Geração de insights para o time de negócio
+
+## Ferramentas Utilizadas na Arquitetura Proposta
 - Cloud Storage: armazenamento temporário dos arquivos brutos
 - BigQuery: banco de dados analítico
 - Python: processo de carga para camada raw
