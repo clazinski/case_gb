@@ -1,3 +1,3 @@
 # Case GB
 ## Arquitetura proposta
-![Arquitetura proposta para o case.](https://postimg.cc/62C4HDvP)
+![Arquitetura proposta para o case.](https://i.postimg.cc/1m9vJRkV/arq.png)
