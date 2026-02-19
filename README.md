@@ -10,7 +10,7 @@ Projeto para importar, transformar e modelar dados de vendas (2017-2019) utiliza
 ## Estrutura
 
 - /cloud_functions → código da função de ingestão para camada RAW
-- /dag → template de dag para execução dos scripts sqls na camada analytics
+- /dag → modelo de DAG para padronizar a execução de queries SQL na camada analytics
 - sql_scripts/datasets → queries para criar tabelas
 
 ## Arquitetura do Fluxo de Dados
